@@ -66,7 +66,7 @@ function generatePassword() {
 
   // If the user picked 'no' for ALL criteria to include tell them to restart and why
   if(optionsChosen.length == 0) {
-    alert("You chose for the password to have NO (0) criteria. Please choose at least ONE (1).");
+    alert("You chose for the password to have NO (0) character criteria. Please choose at least ONE (1).");
     return "No (0) criteria specified. Please choose at least ONE (1).";
   }
 
