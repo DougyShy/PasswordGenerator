@@ -1,9 +1,8 @@
 // Assignment code here
+
+// Assign defaults
 var numChars = 0;
-var lowercase = true;
-var uppercase = true;
-var numeric = true;
-var specialChars = true;
+var lowercase, uppercase, numeric, specialChars = true;
 
 var specialCharsOptions = ["!", "@", "#", "$", "%", "^", "&", "*"];
 var alphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -16,15 +15,14 @@ function writePassword() {
 
   // Initialize number of characters or if user cancels start over
   numChars = window.prompt("How many characters would you like the password to be? (8 - 128)", "8");
-  console.log(numChars);
   if ((numChars == null)) {
-    console.log("QUITTING");
     return false;
   }
 
   // Make sure numbers fall in range. Only accept NUMBERS between 8 and 128
   while((numChars < 8  || numChars > 128) || isNaN(numChars)) {
-    numChars = window.prompt("How many characters would you like the password to be? (8 - 128)");
+    alert("Only numbers between 8 and 128 will work. Please try again.");
+    numChars = window.prompt("How many characters would you like the password to be? (8 - 128)", "8");
     if ((numChars == null)) {
       console.log("QUITTING");
       return false;
@@ -51,19 +49,19 @@ function generatePassword() {
   // Make sure that at least one preference is included
   if (lowercase) {
     optionsChosen.push("lowercase");
-    tempPassword.push(getRandomLowercaseLetter());
+    tempPassword.push(getRandomCharacter("lowercase"));
   }
   if (uppercase) {
     optionsChosen.push("uppercase");
-    tempPassword.push(getRandomUppercaseLetter());
+    tempPassword.push(getRandomCharacter("uppercase"));
   }
   if (numeric) {
     optionsChosen.push("numeric");
-    tempPassword.push(getRandomNumber());
+    tempPassword.push(getRandomCharacter("numeric"));
   }
   if (specialChars) {
     optionsChosen.push("special");
-    tempPassword.push(getRandomSpecialCharacter());
+    tempPassword.push(getRandomCharacter("special"));
   }
 
   // If the user picked 'no' for ALL criteria to include tell them to restart and why
@@ -84,36 +82,18 @@ function generatePassword() {
   
   // return generated password array as a string
   return tempPassword.join('');
-
 }
 
 function getRandomCharacter(format) {
   if (format == 'lowercase') {
-    return getRandomLowercaseLetter();
+    return alphabet[Math.floor(Math.random() * alphabet.length)];
   } else if (format == "uppercase") {
-    return getRandomUppercaseLetter();
+    return alphabet[Math.floor(Math.random() * alphabet.length)].toUpperCase();
   } else if (format == "numeric") {
-    return getRandomNumber();
+    return Math.floor(Math.random() * 10);
   } else if (format == "special") {
-    return getRandomSpecialCharacter();
+    return specialCharsOptions[Math.floor(Math.random() * specialCharsOptions.length)];
   }
 }
 
-function getRandomLowercaseLetter() {
-  return alphabet[Math.floor(Math.random() * alphabet.length)];
-}
-
-function getRandomUppercaseLetter() {
-  return alphabet[Math.floor(Math.random() * alphabet.length)].toUpperCase();
-}
-
-function getRandomNumber() {
-  return Math.floor(Math.random() * 10);
-}
-
-function getRandomSpecialCharacter () {
-  return specialCharsOptions[Math.floor(Math.random() * specialCharsOptions.length)];
-}
-
-// Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
