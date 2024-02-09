@@ -2,7 +2,7 @@
 
 // Assign defaults
 var numChars = 0;
-var lowercase, uppercase, numeric, specialChars = false;
+var lowercase, uppercase, numeric, specialChars = true;
 
 var specialCharsOptions = ["!", "@", "#", "$", "%", "^", "&", "*"];
 var alphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -24,7 +24,6 @@ function writePassword() {
     alert("Only numbers between 8 and 128 will work. Please try again.");
     numChars = window.prompt("How many characters would you like the password to be? (8 - 128)", "8");
     if ((numChars == null)) {
-      console.log("QUITTING");
       return false;
     }
   }
@@ -67,7 +66,7 @@ function generatePassword() {
   // If the user picked 'no' for ALL criteria to include tell them to restart and why
   if(optionsChosen.length == 0) {
     alert("You chose for the password to have NO (0) criteria. Please choose at least ONE (1).");
-    return "No (0) criteria specified. Please choose at least ONE (1).";
+    return "No (0) character criteria specified. Please choose at least ONE (1).";
   }
 
   // Now randomize the rest of the characters
