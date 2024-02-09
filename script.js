@@ -2,7 +2,7 @@
 
 // Assign defaults
 var numChars = 0;
-var lowercase, uppercase, numeric, specialChars = true;
+var lowercase, uppercase, numeric, specialChars = false;
 
 var specialCharsOptions = ["!", "@", "#", "$", "%", "^", "&", "*"];
 var alphabet = "abcdefghijklmnopqrstuvwxyz";

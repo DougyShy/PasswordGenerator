@@ -10,7 +10,9 @@ This project is based on generating a random password as a result of the charact
 - [Installing](#installing)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
+- [Repo](#repo_info)
 - [Contributing](#contributing)
+
 
 ## About
 
@@ -36,6 +38,11 @@ This can be used to develop your own custom RANDOM password from 8 up to 128 cha
 ![Alt text](pwdgen-start.png)
 ![Alt text](pwdgen-prompt.png)
 ![Alt text](pwdgen-result.png)
+
+## Repo
+
+ - Git Repo: https://github.com/DougyShy/PasswordGenerator
+ - Git Site: https://dougyshy.github.io/PasswordGenerator/
 
 
 ## Contributing
