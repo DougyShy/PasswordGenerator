@@ -30,8 +30,9 @@ This can be used to develop your own custom random password up to 128 characters
 
 ## Screenshots
 
-![Alt text](screenshot.png)
-![Alt text](screenshot2.png)
+![Alt text](pwdgen-start.png)
+![Alt text](pwdgen-prompt.png)
+![Alt text](pwdgen-result.png)
 
 
 ## Contributing
