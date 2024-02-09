@@ -1,7 +1,7 @@
 
 # Random Password Generator
 
-This project is based on generating a random password based on the criteria set forth / prompted by the user. 
+This project is based on generating a random password as a result of the character criteria set forth when prompted to the user. 
 
 ## Table of Contents
 
@@ -14,7 +14,10 @@ This project is based on generating a random password based on the criteria set 
 
 ## About
 
- - This javascript app/function will create a random password from 8 to 128 characters involving uppercase and lowercase letters, special characters, and numeric values. All or one but none will not work.
+ - This javascript app/function will create a random password from 8 to 128 characters involving uppercase and lowercase letters, special characters, and numeric values. All preferences or only one will work, but none will not.
+ - The user will be able to set the character criteria.
+ - If the user cancels at the first step asking how many characters the password should be no information is acquired.
+ - If the user chooses to include NO criteria the generator will inform the user that at least one criteria is necessary and the generator will start over.
 
 ## Getting Started
 
@@ -26,7 +29,7 @@ No installation necessary.
 
 ## Usage
 
-This can be used to develop your own custom random password up to 128 characters.
+This can be used to develop your own custom RANDOM password from 8 up to 128 characters.
 
 ## Screenshots
 
